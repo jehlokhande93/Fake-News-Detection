@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--  Author: Taylor Million-->
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./static/lib/css//bootstrap.min.css">
+  <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" href="./static/lib/css/keen2.css">
+  <link rel="stylesheet" href="./static/lib/css/dc.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+  <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<style>
+span {
+    background-color:#c3efe7; 
+	font-weight: bold;
+}
+
+p {
+ 	flex: 1 1 50%;
+    font-family: 'Londrina Shadow';
+	font-size: 66px;
+	font-weight: strong;
+    margin: 0 auto;
+	position:absolute;
+    width:100%;
+    height:100px;
+    left:50%;
+    margin-left:-15%;
+    margin-top:-25px;
+
+}
+.highlight {
+    background-color:#35c4aa; 
+	margin: 0;
+}
+.score {
+ 	flex: 1 1 50%;
+    font-family: 'Londrina Shadow';
+	font-size: 24px;
+	font-weight: strong;
+    margin: 0 auto;
+	position:absolute;
+    width:100%;
+    height:100%;
+    left:50%;
+    margin-left:-15%;
+    margin-top:-25px;
+
+}
+
+.article_text
+{
+	height: 100%;
+	display: flex;
+    flex-direction: column;
+	flex: 1 0 auto;
+	
+}
+
+.chart-wrapper2, .chart-wrapper3, .chart-wrapper4{
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.chart-wrapper3 .chart-title3, .chart-wrapper2 .chart-title2, .chart-wrapper4 .chart-title4{
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 7px 10px 4px;
+}
+
+.chart-wrapper3 .chart-stage3,.chart-wrapper2 .chart-stage2,.chart-wrapper4 .chart-stage4{
+  /*min-height: 240px;*/
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;  
+  
+}
+
+.chart-wrapper3  .chart-notes3, .chart-wrapper2 .chart-notes2, .chart-wrapper4 .chart-notes4{
+  background: #fbfbfb;
+  border-top: 1px solid #e2e2e2;
+  color: #808080;
+  font-size: 12px;
+  padding: 8px 10px 5px;
+
+}
+
+.chart-wrapper2{
+  /*min-height: 240px;*/
+  /*position: relative;*/
+  overflow: scroll;
+  position: absolute;
+  height: 87%;
+  width: 49.5%;
+}
+.chart-wrapper3{
+  position: relative;
+  margin-top:85%;
+  height: 100%;  
+}
+.chart-wrapper4{
+  position: relative;
+  height: 95%;  
+}
+
+</style>
+
+
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./">Fake News Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="row">
+
+          <!-- Fake Score Chart --> 
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Classification
+              </div>
+              <div class="chart-stage">
+			  <!--<iframe width="100%" height="250px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion3/14.embed"></iframe>-->
+			  <iframe width="100%" height="250px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion/0.embed"></iframe>
+              </div>
+            </div>
+          </div>
+          <!-- Fake Score Chart --> 
+
+          <!-- Result Breakdown -->
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Result Details
+              </div>
+              <div class="chart-stage">
+                <div id="donut_chart1">
+				<!--iframe width="100%" height="480px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion3/0/fakeness-component-template.embed"></iframe-->
+				<!--<iframe width="100%" height="300px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion3/8/score-component-breakdown.embed"></iframe>-->
+				<!--<iframe width="100%" height="500px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion3/21.embed"></iframe>-->
+				<iframe width="100%" height="450px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion/1/score-component-breakdown.embed"></iframe>
+				
+				
+			
+				<!--Donut Charts
+				src="https://plot.ly/~jackp/10021.embed"
+				"https://plot.ly/~tmillion3/0/fakeness-component-template/
+				"https://plot.ly/~tmillion3/0/fakeness-component-template.embed"
+				plotly resource:https://plot.ly/~RPlotBot/2893/donut-charts-using-plotly/#plot
+				-->
+				</div>
+				<div id="donut_chart2">
+				</div>
+				<div id="donut_chart3">
+				</div>
+              </div>
+            </div>
+          </div>
+          <!-- Result Breakdown -->
+
+          <!-- Topic Node Map -->
+          <div class="col-sm-12">
+            <div class="chart-wrapper4">
+              <div class="chart-title4">
+                Related Topics
+              </div>
+              <div class="chart-stage4">
+                <div id="poverty-level-row-chart">
+				<iframe width="100%" height="250px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion/3.embed"></iframe>
+				
+				</div>
+              </div>
+            </div>
+          </div>
+          <!-- Topic Node Map -->
+
+        </div>
+      </div>
+
+      <!-- Article Text -->  
+      <!--div class= "col-sm-6"--> 
+      <div class= "article_text"> 
+	  <!-- "col-sm-6" -->
+        <!--div class="article_text"-->
+        <div class="chart-wrapper2">
+          <div class="chart-title2">
+            Article Contents
+          </div>
+          <div class="chart-stage2">
+            <div class="article_text">
+			<!-- Highlighting Text <span>  </span> -->
+			{{article.text}}
+			</div>
+          </div>
+        </div>
+      </div>
+      <!-- Article Text -->
+		
+	 
+      <!-- Google Trends -->
+      <!--div class="col-sm-3"-->
+      <div class="article_text">
+        <div class="chart-wrapper3">
+          <div class="chart-title3">
+            Google Trends
+          </div>
+          <div class="chart-stage3">
+            <div id="GTrends">
+			<!--<iframe width="100%" height="400px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion3/4/new-york-attack/.embed"></iframe>-->
+			<iframe width="100%" height="400px" frameborder="0" scrolling="no" src="https://plot.ly/~tmillion/5.embed"></iframe>
+			</div>
+			
+          </div>
+        </div>
+      </div>
+      <!-- Google Trends -->
+	 
+
+    </div>
+
+  </div>
+
+    <hr>
+    <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
+
+  </div>
+
+  <script src="./static/lib/js/jquery.min.js"></script>
+  <script src="./static/lib/js/bootstrap.min.js"></script>
+  <script src="./static/lib/js/crossfilter.js"></script>
+  <script src="./static/lib/js/d3.js"></script>
+  <script src="./static/lib/js/dc.js"></script>
+  <script src="./static/lib/js/queue.js"></script>
+
+
+  <script src="./static/lib/js/keen.min.js"></script>
+  <script src='./static/js/graphs.js' type='text/javascript'></script>
+</body>
+</html>

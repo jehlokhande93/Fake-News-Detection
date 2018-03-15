@@ -1,5 +1,5 @@
 CSE 6242 Data and Visual Analytics Final Project - Fake News Detection
-# Author: Taylor Million, Jeh Lokhande
+# Author: Taylor Million
 
 # 1. DESCRIPTION
 ### General Overview

@@ -1,0 +1,39 @@
+-----------------------------------
+Folder Structure
+-----------------------------------
+Please ensure that the folder structure is not modified in any way. 
+The scripts import/load objects saved in the folders.
+------------------------------------
+Python 3.6 Required
+------------------------------------
+General Installation Requirements
+------------------------------------
+pip install dash==0.18.3
+pip install dash-renderer==0.10.0
+pip install dash-html-components==0.7.0
+pip install dash-core-components==0.12.6
+pip install plotly --upgrade
+
+pip install newspaper3k
+pip install nltk
+
+pip install Flask
+
+#import nltk
+#nltk.download()
+
+install mongodb
+
+------------------------------------
+Installation Requirements for Model
+------------------------------------
+pip install TextBlob
+pip install gensim
+conda install -c mikesilva xgboost
+pip install scipy
+pip install sklearn
+
+------------------------------------
+Downloads
+------------------------------------
+word2vec = https://github.com/mmihaltz/word2vec-GoogleNews-vectors

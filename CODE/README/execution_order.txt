@@ -1,0 +1,10 @@
+Run MongoDB before opening the app
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
+
+Navigate to the app folder
+python run.py
+
+Type 127.0.0.1:8000 into web browser
+
+Type in URL 
+Click search
